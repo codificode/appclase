@@ -32,7 +32,7 @@ public class Consultas extends AppCompatActivity {
 
         try {
             MiAplicacion miAplicacion = (MiAplicacion) getApplication();
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion2", null, 1);
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, miAplicacion.getBaseDatosActual(), null, 1);
             SQLiteDatabase BaseDeDatos = admin.getReadableDatabase();
 
             String textoConsulta = editTextConsultas.getText().toString();

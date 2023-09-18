@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Negativos">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp">
+
+            <!-- Parte 1: Fila de encabezado -->
+            <include layout="@layout/encabezadonegativos" />
+
+            <!-- Parte 2: RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/filanegativos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <!-- Parte 3: Fila con botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonEnviarNegativos"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:onClick="enviar"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Enviar" />
+
+                <Button
+                    android:id="@+id/buttonVolverNegativos"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:onClick="volver"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Volver" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    </HorizontalScrollView>

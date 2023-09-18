@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/textViewEncabezadoNumeroFaltas"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:text="Num"/>
+
+    <TextView
+        android:id="@+id/textViewEncabezadoNombreFaltas"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:text="Nombre"/>
+    <TextView
+        android:id="@+id/textViewEncabezadoCheckBoxPrimeraFaltas"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:text="Primera" />
+
+    <TextView
+        android:id="@+id/textViewEncabezadoCheckBoxSegundaFaltas"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:text="Segunda" />
+    <TextView
+        android:id="@+id/textViewEncabezadoCheckBoxTerceraFaltas"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:text="Tercera" />
+
+</LinearLayout>

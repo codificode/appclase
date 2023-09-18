@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 public class AgregarAlumno extends AppCompatActivity {
 
     private Spinner spinnerGruposAgregarAlumno;
-    String grupoActual;
+    String grupo;
     ArrayList<String> grupos;
     EditText editTextAgregarAlumno;
 
@@ -33,7 +34,6 @@ public class AgregarAlumno extends AppCompatActivity {
         MiAplicacion miAplicacion = (MiAplicacion) getApplication();
         miAplicacion.setArrayListGrupos();
         grupos = miAplicacion.getArrayListGrupos();
-        grupoActual = miAplicacion.getGrupoActual();
 
         //Crear un adapter para el Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, grupos);
@@ -49,10 +49,24 @@ public class AgregarAlumno extends AppCompatActivity {
                 spinnerGruposAgregarAlumno.setAdapter(adapter);
             }
         }
+
+        spinnerGruposAgregarAlumno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                grupo = grupos.get(position); // Obtener el grupo seleccionado
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Acción a realizar cuando no se selecciona nada en el Spinner
+            }
+        });
     }
 
     public void agregar(View view) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion2", null, 1);
+        MiAplicacion miAplicacion = (MiAplicacion) getApplication();
+        miAplicacion.setArrayListGrupos();
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, miAplicacion.getBaseDatosActual(), null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
         String nombre = editTextAgregarAlumno.getText().toString();
 
@@ -60,7 +74,7 @@ public class AgregarAlumno extends AppCompatActivity {
         if(!nombre.isEmpty()){
             ContentValues registro = new ContentValues();
 
-            registro.put("grupo", grupoActual);
+            registro.put("grupo", grupo);
             registro.put("nombre", nombre);
 
             BaseDeDatos.insert("alumnos", null, registro);
@@ -74,6 +88,13 @@ public class AgregarAlumno extends AppCompatActivity {
             Toast.makeText(this, "Debes llenar todos los campos", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void ponerNumero(View view){
+        MiAplicacion miAplicacion = (MiAplicacion) getApplication();
+        Intent i = new Intent(this, PonerNumero.class);
+        startActivity(i);
+    }
+
     public void volver(View view){
         MiAplicacion miAplicacion = (MiAplicacion) getApplication();
         Intent i = new Intent(this, MainActivity.class);

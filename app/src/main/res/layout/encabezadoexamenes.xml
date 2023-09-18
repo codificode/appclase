@@ -1,0 +1,140 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/textViewEncabezadoNumeroExamenes"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Num"/>
+
+    <TextView
+        android:id="@+id/textViewEncabezadoNombreExamenes"
+        android:layout_width="140dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Nombre"/>
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPar1Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Par1" />
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPar2Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Par2" />
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPar3Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Par3" />
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPar4Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Par4" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPar5Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Par5" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPar6Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Par6" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec1Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec1" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec2Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec2" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec3Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec3" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec4Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec4" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec5Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec5" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec6Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec6" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec21Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec21" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec22Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec22" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec23Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec23" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec24Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec24" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec25Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec25" />
+    <TextView
+        android:id="@+id/textViewEncabezadoRec26Examenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Rec26" />
+    <TextView
+        android:id="@+id/textViewEncabezadoFinalExamenes"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Final" />
+
+</LinearLayout>

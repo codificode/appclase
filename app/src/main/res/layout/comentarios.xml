@@ -13,7 +13,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp">
 
             <!-- Parte 1: Fila de encabezado -->
             <include layout="@layout/encabezadocomentarios" />
@@ -28,7 +30,7 @@
             <!-- Parte 3: Fila con botones -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="100dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -37,6 +39,7 @@
                     android:layout_height="48dp"
                     android:onClick="enviar"
                     android:paddingHorizontal="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="Enviar" />
 
                 <Button
@@ -45,6 +48,8 @@
                     android:layout_height="48dp"
                     android:onClick="volver"
                     android:paddingHorizontal="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="Volver" />
 
             </LinearLayout>

@@ -14,22 +14,67 @@
         android:theme="@style/Theme.AppClase"
         tools:targetApi="31">
         <activity
+            android:name=".BaseDatos"
+            android:exported="false" />
+        <activity
+            android:name=".Faltas"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarioFaltas"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".NotasPracticas"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".PonerNumero"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".ExamenPracticoPorAlumno"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".ExamenPractico"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".Positivos"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".Negativos"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".Examenes"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
             android:name=".Comentarios"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".OpcionesGrupo"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Consultas"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".AgregarAlumno"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".AgregarGrupo"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,5 +83,7 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

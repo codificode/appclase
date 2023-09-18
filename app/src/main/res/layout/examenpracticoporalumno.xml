@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExamenPracticoPorAlumno">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/pantalla"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <LinearLayout
+                android:id="@+id/encabezadoTotal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/layoutVertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/encabezadoDatosAlummno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:id="@+id/textViewNombreAlumnoExamenPracticoPorAlumno"
+                            android:layout_width="220dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/encabezadoPreguntas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:id="@+id/textViewPreguntaExamenPracticoPorAlumno"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:text="Pregunta" />
+
+                        <TextView
+                            android:id="@+id/textVieSiExamenPracticoPorAlumno"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:text="Sí" />
+
+                        <TextView
+                            android:id="@+id/textViewNoExamenPracticoPorAlumno"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:text="No" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutBotones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonEnviarExamenPracticoPorAlumno"
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:onClick="enviar"
+                        android:paddingHorizontal="10dp"
+                        android:text="Enviar" />
+
+                    <Button
+                        android:id="@+id/buttonVolverExamenPracticoPorAlumno"
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:onClick="volver"
+                        android:paddingHorizontal="10dp"
+                        android:text="Volver"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Parte 2: RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/filaexamenpracticoporalumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</HorizontalScrollView>
+

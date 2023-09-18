@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Faltas">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp">
+
+            <!-- Parte 1: Fila de encabezado -->
+            <include layout="@layout/encabezadofaltas" />
+
+            <!-- Parte 2: RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/filafaltas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <!-- Parte 3: Fila con botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonEnviarFaltas"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:onClick="enviar"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Enviar" />
+
+
+                <Button
+                    android:id="@+id/buttonVolverFaltas"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:onClick="volver"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Volver" />
+
+                <TextView
+                    android:id="@+id/textViewFaltasHueco"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/buttonQuitarFaltas"
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="80dp"
+                    android:backgroundTint="?android:attr/colorMultiSelectHighlight"
+                    android:onClick="quitar"
+                    android:paddingHorizontal="10dp"
+                    android:text="Quitar"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</HorizontalScrollView>

@@ -1,0 +1,110 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/textViewEncabezadoNumeroNotasPracticas"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Num"/>
+
+    <TextView
+        android:id="@+id/textViewEncabezadoNombreNotasPracticas"
+        android:layout_width="140dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Nombre"/>
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPra1NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra1" />
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPra2NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra2" />
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPra3NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra3" />
+
+    <TextView
+        android:id="@+id/textViewEncabezadoPra4NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra4" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra5NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra5" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra6NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra6" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra7NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra7" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra8NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra8" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra9NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra9" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra10NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra10" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra11NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra11" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra12NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra12" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra13NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra13" />
+    <TextView
+        android:id="@+id/textViewEncabezadoPra14NotasPracticas"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Pra14" />
+
+</LinearLayout>

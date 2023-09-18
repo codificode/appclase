@@ -24,8 +24,8 @@ public class AgregarGrupo extends AppCompatActivity {
     }
 
     public void agregarGrupo(View view){
-
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion2", null, 1);
+        MiAplicacion miAplicacion = (MiAplicacion) getApplication();
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, miAplicacion.getBaseDatosActual(), null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
         String grupo = editTextAgregarGrupo.getText().toString();
 

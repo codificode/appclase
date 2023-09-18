@@ -8,10 +8,10 @@
 
     <Button
         android:id="@+id/buttonConsultasOpcionesGrupo"
-        android:layout_width="148dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="548dp"
+        android:layout_width="118dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="356dp"
         android:onClick="consultas"
         android:text="Consultas"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,10 +19,10 @@
 
     <Button
         android:id="@+id/buttonComentariosOpcionesGrupo"
-        android:layout_width="152dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="452dp"
+        android:layout_width="133dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="92dp"
         android:onClick="comentarios"
         android:text="Comentarios"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,12 +30,79 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="145dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="352dp"
+        android:layout_width="125dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="452dp"
         android:onClick="volver"
         android:text="Volver"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonExamenesOcionesGrupo"
+        android:layout_width="126dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="356dp"
+        android:onClick="examenes"
+        android:text="Examenes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonNegativosOpcionesGrupo"
+        android:layout_width="121dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="180dp"
+        android:onClick="negativos"
+        android:text="Negativos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="125dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="180dp"
+        android:onClick="positivos"
+        android:text="Positivos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonExamenPracticoOpcionesGrupo"
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="268dp"
+        android:onClick="examenPractico"
+        android:text="Examen práctico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPracticasOpcionesGrupo"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="264dp"
+        android:onClick="practicas"
+        android:text="Prácticas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFaltasOpcionesGrupo"
+        android:layout_width="123dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="92dp"
+        android:onClick="faltas"
+        android:text="Faltas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,12 @@
 package com.example.appclase;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.util.Log;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        spinnerGruposInicioPrograma = findViewById(R.id.spinnerGruposInicioPrograma);
         MiAplicacion miAplicacion = (MiAplicacion) getApplication();
         miAplicacion.setArrayListGrupos();
         grupos = miAplicacion.getArrayListGrupos();
+        spinnerGruposInicioPrograma = findViewById(R.id.spinnerGruposInicioPrograma);
 
         //Crear un adapter para el Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, grupos);
@@ -65,4 +65,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, OpcionesGrupo.class);
         startActivity(i);
     }
+
+    public void baseDatos(View view){
+        Intent i = new Intent(this, BaseDatos.class);
+        startActivity(i);
+    }
+
 }

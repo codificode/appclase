@@ -21,17 +21,18 @@ public class Comentarios extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<ObjetoComentario> listaComentarios = new ArrayList<>();
 
-    MiAplicacion miAplicacion = (MiAplicacion) getApplication();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comentarios);
+        MiAplicacion miAplicacion = (MiAplicacion) getApplication();
 
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion2", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, miAplicacion.getBaseDatosActual(), null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+        String[] selectionArgs = {miAplicacion.getGrupoActual()};
 
-        Cursor cursor = BaseDeDatos.query("alumnos", new String[]{"id", "numero", "nombre"}, null, null, null, null, "numero");
+        Cursor cursor = BaseDeDatos.query("alumnos", new String[]{"id", "numero", "nombre"}, "grupo = ?", selectionArgs, null, null, "numero");
 
         if (cursor != null) {
             int numColumns = cursor.getColumnCount();
@@ -63,7 +64,7 @@ public class Comentarios extends AppCompatActivity {
     public void enviar(View view) {
         try {
             MiAplicacion miAplicacion = (MiAplicacion) getApplication();
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion2", null, 1);
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, miAplicacion.getBaseDatosActual(), null, 1);
             SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
             String grupo = miAplicacion.getGrupoActual();
 

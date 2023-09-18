@@ -10,22 +10,25 @@ import java.util.ArrayList;
 public class MiAplicacion extends Application {
     private String grupoActual;
     private String alumnoActual;
+    private ObjetoAlumnoExamenPractico objetoAlumnoActual = new ObjetoAlumnoExamenPractico("cojones", "cojones","cojones");
     private String alumnoActualId;
     private String alumnoActualNombre;
+    private String alumnoActualNumero;
     private String fechaActual;
+    private String baseDatosActual = "administracionV3";
 
     private ArrayList<String> grupos = new ArrayList<>();
 
 
 public void setArrayListGrupos() {
-    AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion2", null, 1);
+    AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, baseDatosActual, null, 1);
     SQLiteDatabase BaseDeDatos = admin.getReadableDatabase();
 
     Cursor consulta = BaseDeDatos.rawQuery("select grupo from grupos", null);
 
+    grupos.clear();
     // Verifica si el cursor tiene datos antes de intentar acceder a ellos
     if (consulta.moveToFirst()) {
-        grupos.clear();
         do {
             try {
                 int columnIndex = consulta.getColumnIndex("grupo");
@@ -67,14 +70,38 @@ public void setArrayListGrupos() {
 
     public void setAlumnoActualId(String alumnoActualId) {
         this.alumnoActualId = alumnoActualId;
+        this.actualizarAlumno();
     }
 
     public String getAlumnoActualNombre() {
         return alumnoActualNombre;
     }
 
-    public void setAlumnoActualNombre(String alumnoActualNombre) {
-        this.alumnoActualNombre = alumnoActualNombre;
+    public void actualizarAlumno(){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, baseDatosActual, null, 1);
+        SQLiteDatabase BaseDeDatos = admin.getReadableDatabase();
+
+        Cursor consulta = BaseDeDatos.rawQuery("select numero, nombre from alumnos where id = " + this.alumnoActualId + ";", null);
+
+        // Verifica si el cursor tiene datos antes de intentar acceder a ellos
+        if (consulta.moveToFirst()) {
+                try {
+                    int columnIndex = consulta.getColumnIndex("numero");
+                    int columnIndex2 = consulta.getColumnIndex("nombre");
+                    this.alumnoActualNumero = consulta.getString(columnIndex);
+                    this.alumnoActualNombre = consulta.getString(columnIndex2);
+                } catch (IllegalArgumentException e) {
+                    // La columna no existe en el cursor, maneja la excepción de manera apropiada
+                }
+        } else {
+            Toast.makeText(this, "No se encontraron alumnos en la base de datos", Toast.LENGTH_SHORT).show();
+        }
+        consulta.close();
+        BaseDeDatos.close();
+    }
+
+    public String getAlumnoActualNumero() {
+        return alumnoActualNumero;
     }
 
     public String getFechaActual() {
@@ -91,5 +118,19 @@ public void setArrayListGrupos() {
 
     public void setGrupos(ArrayList<String> grupos) {
         this.grupos = grupos;
+    }
+
+    public ObjetoAlumnoExamenPractico getObjetoAlumnoActual() {
+        return objetoAlumnoActual;
+    }
+
+    public String getBaseDatosActual() {
+        return baseDatosActual;
+    }
+
+    public void setObjetoAlumnoActual(ObjetoAlumnoExamenPractico objetoAlumnoActual) {
+        this.objetoAlumnoActual = objetoAlumnoActual;
+
+
     }
 }

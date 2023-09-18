@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarioFaltas">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:text="Sept" />
+
+                <Button
+                    android:id="@+id/button20sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas20sep"
+                    android:paddingHorizontal="5dp"
+                    android:text="20" />
+
+                <Button
+                    android:id="@+id/button21sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas21sep"
+                    android:paddingHorizontal="5dp"
+                    android:text="21" />
+
+                <Button
+                    android:id="@+id/button22sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas22sept"
+                    android:paddingHorizontal="5dp"
+                    android:text="22" />
+
+                <Button
+                    android:id="@+id/buttons25sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas25sept"
+                    android:paddingHorizontal="5dp"
+                    android:text="25" />
+
+                <Button
+                    android:id="@+id/button26sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas26sept"
+                    android:paddingHorizontal="5dp"
+                    android:text="26" />
+
+                <Button
+                    android:id="@+id/buttons27sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas27sept"
+                    android:paddingHorizontal="5dp"
+                    android:text="27" />
+
+                <Button
+                    android:id="@+id/button28sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas28sept"
+                    android:paddingHorizontal="5dp"
+                    android:text="28" />
+
+                <Button
+                    android:id="@+id/buttons29sept"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas29sept"
+                    android:paddingHorizontal="5dp"
+                    android:text="29" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:text="0ct" />
+
+                <Button
+                    android:id="@+id/button2oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas2oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/button3oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas3oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/button4oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas4oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/buttons5oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas5oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/button6oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas6oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/buttons9oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas9oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/button10oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas10oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="10" />
+
+                <Button
+                    android:id="@+id/buttons11oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas11oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="11" />
+
+                <Button
+                    android:id="@+id/buttons16oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas16oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="16" />
+
+                <Button
+                    android:id="@+id/buttons17oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas17oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="17" />
+
+                <Button
+                    android:id="@+id/buttons18oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas18oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="18" />
+
+                <Button
+                    android:id="@+id/buttons19oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas19oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="19" />
+
+                <Button
+                    android:id="@+id/buttons20oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas20oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="20" />
+
+                <Button
+                    android:id="@+id/buttons23oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas23oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="23" />
+
+                <Button
+                    android:id="@+id/buttons24oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas24oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="24" />
+
+                <Button
+                    android:id="@+id/buttons25oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas25oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="25" />
+
+                <Button
+                    android:id="@+id/buttons26oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas26oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="26" />
+
+                <Button
+                    android:id="@+id/buttons27oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas27oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="27" />
+
+                <Button
+                    android:id="@+id/buttons30oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas30oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="30" />
+
+                <Button
+                    android:id="@+id/buttons31oct"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas31oct"
+                    android:paddingHorizontal="5dp"
+                    android:text="31" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:text="Nov" />
+
+                <Button
+                    android:id="@+id/button2nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas2nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/button3nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas3nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/button6nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas6nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/button7nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas7nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/button8nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas8nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/button9nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas9nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/button10nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas10nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="10" />
+
+                <Button
+                    android:id="@+id/button13nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas13nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="13" />
+
+                <Button
+                    android:id="@+id/button14nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas14nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="14" />
+
+                <Button
+                    android:id="@+id/button15nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas15nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="15" />
+
+                <Button
+                    android:id="@+id/button16nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas16nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="16" />
+
+                <Button
+                    android:id="@+id/button17nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas17nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="17" />
+
+                <Button
+                    android:id="@+id/button20nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas20nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="20" />
+
+                <Button
+                    android:id="@+id/button21nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas21nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="21" />
+
+                <Button
+                    android:id="@+id/button22nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas22nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="22" />
+
+                <Button
+                    android:id="@+id/button23nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas23nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="23" />
+
+                <Button
+                    android:id="@+id/button24nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas24nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="24" />
+
+                <Button
+                    android:id="@+id/button27nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas27nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="27" />
+
+                <Button
+                    android:id="@+id/button28nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas28nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="28" />
+
+                <Button
+                    android:id="@+id/button29nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas29nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="29" />
+
+                <Button
+                    android:id="@+id/button30nov"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas30nov"
+                    android:paddingHorizontal="5dp"
+                    android:text="30" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:text="Dic" />
+
+                <Button
+                    android:id="@+id/button1dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas1dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/button4dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas4dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/button5dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas5dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/button11dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas11dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="11" />
+
+                <Button
+                    android:id="@+id/button12dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas12dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="12" />
+
+                <Button
+                    android:id="@+id/button13dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas13dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="13" />
+
+                <Button
+                    android:id="@+id/button14dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas14dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="14" />
+
+                <Button
+                    android:id="@+id/button15dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas15dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="15" />
+
+                <Button
+                    android:id="@+id/button18dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas18dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="18" />
+
+                <Button
+                    android:id="@+id/button19dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas19dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="19" />
+
+                <Button
+                    android:id="@+id/button20dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas20dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="20" />
+
+                <Button
+                    android:id="@+id/button21dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas21dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="21" />
+
+                <Button
+                    android:id="@+id/button22dic"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas22dic"
+                    android:paddingHorizontal="5dp"
+                    android:text="22" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:text="Ene" />
+
+                <Button
+                    android:id="@+id/button8ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas8ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/button9ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas9ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/button10ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas10ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="10" />
+
+                <Button
+                    android:id="@+id/button11ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas11ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="11" />
+
+                <Button
+                    android:id="@+id/button12ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas12ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="12" />
+
+                <Button
+                    android:id="@+id/button15ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas15ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="15" />
+
+                <Button
+                    android:id="@+id/button16ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas16ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="16" />
+
+                <Button
+                    android:id="@+id/button17ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas17ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="17" />
+
+                <Button
+                    android:id="@+id/button18ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas18ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="18" />
+
+                <Button
+                    android:id="@+id/button19ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas19ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="19" />
+
+                <Button
+                    android:id="@+id/button22ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas22ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="22" />
+
+                <Button
+                    android:id="@+id/button23ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas23ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="23" />
+
+                <Button
+                    android:id="@+id/button24ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas24ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="24" />
+
+                <Button
+                    android:id="@+id/button25ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas25ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="25" />
+
+                <Button
+                    android:id="@+id/button26ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas26ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="26" />
+
+                <Button
+                    android:id="@+id/button29ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas29ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="29" />
+
+                <Button
+                    android:id="@+id/button30ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas30ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="30" />
+
+                <Button
+                    android:id="@+id/button31ene"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas31ene"
+                    android:paddingHorizontal="5dp"
+                    android:text="31" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:text="Feb" />
+
+                <Button
+                    android:id="@+id/button1feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas1feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/button2feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas2feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/button5feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas5feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/button6feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas6feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/button7feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas7feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/button8feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas8feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/button9feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas9feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/button14feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas14feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="14" />
+
+                <Button
+                    android:id="@+id/button15feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas15feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="15" />
+
+                <Button
+                    android:id="@+id/button16feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas16feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="16" />
+
+                <Button
+                    android:id="@+id/button19feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas19feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="19" />
+
+                <Button
+                    android:id="@+id/button20feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas20feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="20" />
+
+                <Button
+                    android:id="@+id/button21feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas21feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="21" />
+
+                <Button
+                    android:id="@+id/button22feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas22feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="22" />
+
+                <Button
+                    android:id="@+id/button23feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas23feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="23" />
+
+                <Button
+                    android:id="@+id/button26feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas26feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="26" />
+
+                <Button
+                    android:id="@+id/button27feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas27feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="27" />
+
+                <Button
+                    android:id="@+id/button28feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas28feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="28" />
+
+                <Button
+                    android:id="@+id/button29feb"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:onClick="llamarMetodoFaltas29feb"
+                    android:paddingHorizontal="5dp"
+                    android:text="29" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</HorizontalScrollView>
