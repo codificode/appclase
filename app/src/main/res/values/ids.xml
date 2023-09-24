@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <item name="radioButton1" type="id" />
+    <item name="radioButton2" type="id" />
+    <item name="radioButton3" type="id" />
+    <item name="radioButton4" type="id" />
+    <item name="radioButton5" type="id" />
+    <item name="editText" type="id" />
+    <item name="widthInPixels35" type="id" />
+    <item name="textViewNumero" type="id" />
+
+
+</resources>

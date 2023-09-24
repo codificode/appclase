@@ -10,24 +10,42 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Comentarios extends AppCompatActivity {
-
-    RecyclerView recyclerView;
     ArrayList<ObjetoComentario> listaComentarios = new ArrayList<>();
+    ArrayList<ObjetoViewComentarios> listaViewComentarios = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comentarios);
-        MiAplicacion miAplicacion = (MiAplicacion) getApplication();
 
+        // Relleno la lista de datos listaComentarios
+        listaComentarios = inicializarListaComentarios();
+
+        // Obtén una referencia al contenedor donde colocarás las filas
+        LinearLayout contenedorFilas = findViewById(R.id.linearLayoutFilasComentarios);
+
+        // Itera sobre la lista de comentarios y crea una vista para cada comentario
+        for (ObjetoComentario comentario : listaComentarios) {
+            View filaView = crearFilaView(comentario);
+            contenedorFilas.addView(filaView);
+        }
+    }
+
+    private ArrayList<ObjetoComentario> inicializarListaComentarios() {
+        MiAplicacion miAplicacion = (MiAplicacion) getApplication();
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, miAplicacion.getBaseDatosActual(), null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
         String[] selectionArgs = {miAplicacion.getGrupoActual()};
@@ -48,17 +66,26 @@ public class Comentarios extends AppCompatActivity {
             cursor.close();
             BaseDeDatos.close();
         }
+        return listaComentarios;
+    }
 
-        // Obtén una referencia al RecyclerView desde el archivo XML de diseño
-        recyclerView = findViewById(R.id.filacomentarios);
+    private View crearFilaView(ObjetoComentario comentario) {
+        // Infla la vista de la fila desde el XML
+        View filaView = LayoutInflater.from(this).inflate(R.layout.filacomentarios, null);
 
-        // Configura un LinearLayoutManager (u otro tipo de LayoutManager según tus necesidades)
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        // Accede a las vistas dentro de la fila y configura sus valores
+        TextView textViewNumero = filaView.findViewById(R.id.textViewNumeroComentarios);
+        TextView textViewNombre = filaView.findViewById(R.id.textViewNombreComentarios);
+        EditText editTextComentario = filaView.findViewById(R.id.editTextComentarioComentarios);
 
-        // Crea una instancia de tu adaptador personalizado y configúralo en el RecyclerView
-        ComentariosAdapter adapter = new ComentariosAdapter(listaComentarios); // Suponiendo que tengas una lista de comentarios
-        recyclerView.setAdapter(adapter);
+        textViewNumero.setText(String.valueOf(comentario.getNumero()));
+        textViewNombre.setText(comentario.getNombre());
+        editTextComentario.setText(comentario.getComentario());
+
+        ObjetoViewComentarios objetoViewComentarios = new ObjetoViewComentarios(textViewNumero, textViewNombre, editTextComentario);
+        listaViewComentarios.add(objetoViewComentarios);
+
+        return filaView;
     }
 
     public void enviar(View view) {
@@ -75,7 +102,7 @@ public class Comentarios extends AppCompatActivity {
                     String id = String.valueOf(listaComentarios.get(fila).getIdAlumno());
                     String numero = String.valueOf(listaComentarios.get(fila).getNumero());
                     String nombre = String.valueOf(listaComentarios.get(fila).getNombre());
-                    String comentario = String.valueOf(listaComentarios.get(fila).getComentario());
+                    String comentario = String.valueOf(listaViewComentarios.get(fila).getEditTextComentario());
                     String fechayhora = LocalDate.now().toString();
 
                     if (!comentario.equals("")) {

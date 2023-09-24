@@ -5,7 +5,6 @@ public class ObjetoNegativo {
     int idAlumno;
     int numero;
     String nombre;
-
     String causa ="";
     String comentario = "";
 

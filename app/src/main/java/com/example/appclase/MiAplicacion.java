@@ -15,7 +15,7 @@ public class MiAplicacion extends Application {
     private String alumnoActualNombre;
     private String alumnoActualNumero;
     private String fechaActual;
-    private String baseDatosActual = "administracionV3";
+        private String baseDatosActual = "curso2.db";
 
     private ArrayList<String> grupos = new ArrayList<>();
 

@@ -34,8 +34,9 @@ public class OpcionesGrupo extends AppCompatActivity {
         startActivity(i);
     }
 
+
     public void positivos(View view){
-        Intent i = new Intent(this, Positivos.class);
+        Intent i = new Intent(this, Positivos2.class);
         startActivity(i);
     }
 

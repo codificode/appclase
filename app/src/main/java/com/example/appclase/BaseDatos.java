@@ -1,5 +1,6 @@
 package com.example.appclase;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,10 +13,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
-import android.Manifest;
-import android.content.pm.PackageManager;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -29,7 +27,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -101,7 +98,7 @@ public class BaseDatos extends AppCompatActivity {
         }
 
         // Define la ruta de destino en la carpeta de copias de seguridad
-        File backupDB4 = new File(directoriocopia, "administracionV3" + fecha + ".db");
+        File backupDB4 = new File(directoriocopia, "backupDBappclase" + fecha + ".db");
 
         File data = Environment.getDataDirectory();
         String pathData = "/data/" + getPackageName() + "/databases/" + nombreDB;
@@ -119,7 +116,7 @@ public class BaseDatos extends AppCompatActivity {
     }
 
 
-    public void importarDesdeFija(View view) throws IOException {
+    private void importarDesdeFija() throws IOException {
 
         // Verifica si se tienen los permisos y solicítalos si no
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -146,11 +143,11 @@ public class BaseDatos extends AppCompatActivity {
         }
 
         // Define la ruta de origen en la carpeta de copias de seguridad
-        File backupDB4 = new File(directoriocopia, "administracionV3.db");
+        File backupDB4 = new File(directoriocopia, nombreDB);
 
         //ruta en destino en carpeta de la app
         File data = Environment.getDataDirectory();
-        String pathData = "/data/" + getPackageName() + "/databases/" + "administracionV3";
+        String pathData = "/data/" + getPackageName() + "/databases/" + nombreDB;
         File currentDB = new File(data, pathData);
 
         // Resto de tu código para exportar la base de datos
@@ -166,6 +163,26 @@ public class BaseDatos extends AppCompatActivity {
             Toast.makeText(this, "No existe backupDB4", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void importarBDAviso(View view) {
+        new AlertDialog.Builder(this)
+                .setTitle("Confirmación")
+                .setMessage("¿Estás seguro de que quieres importar la base de datos?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Aquí es donde llamarías a tu método si el usuario confirma
+                        try {
+                            importarDesdeFija();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
+
 
 
     public void importar(View view) {
@@ -248,7 +265,7 @@ public class BaseDatos extends AppCompatActivity {
         return realPath;
     }
 
-    public void eliminarBaseDatos() {
+    private void eliminarBaseDatos() {
 
         Context context = this;
 
@@ -305,7 +322,7 @@ public class BaseDatos extends AppCompatActivity {
         String fecha = String.valueOf(LocalDate.now());
 
         // Ruta en Firebase Storage donde se almacenará la base de datos
-        StorageReference dbRef = storageRef.child("administracionV3"+fecha+".db");
+        StorageReference dbRef = storageRef.child("backupDBappclase"+fecha+".db");
 
         // Ruta de la base de datos local
         File data = Environment.getDataDirectory();
@@ -335,39 +352,6 @@ public class BaseDatos extends AppCompatActivity {
             Log.e("UPLOAD", "Error al acceder a la base de datos local: " + e.getMessage());
         }
     }
-
-    public void reemplazar(View view){
-        reemplazarBaseDeDatos("administracionV3.db");
-    }
-
-    private void reemplazarBaseDeDatos(String archivoDescargado) {
-
-        File raiz = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-        // Define la ruta de origen en la carpeta de copias de seguridad
-        File directoriocopia = new File(raiz, "copiasdeseguridad");
-
-
-
-
-        File data = Environment.getDataDirectory();
-        String pathData = "/data/" + getPackageName() + "/databases/" + "administracionV3.db";
-
-        File currentDB = new File(data, pathData);
-        File newDB = new File(directoriocopia, "administracionV3.db"); // archivoDescargado es el nombre del archivo descargado
-
-        if (newDB.exists()) {
-            // Reemplazar la base de datos existente con el nuevo archivo descargado
-            if (currentDB.delete()) {
-                newDB.renameTo(currentDB);
-                Log.d("IMPORTAR_DB", "Base de datos reemplazada con éxito");
-            } else {
-                Log.e("IMPORTAR_DB", "Error al eliminar la base de datos existente");
-            }
-        } else {
-            Log.e("IMPORTAR_DB", "El archivo descargado no se encontró");
-        }
-    }
-
 
 
     public void volver(View view) {

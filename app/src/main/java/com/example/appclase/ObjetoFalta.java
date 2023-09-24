@@ -7,6 +7,9 @@ public class ObjetoFalta {
     Boolean primera;
     Boolean segunda;
     Boolean tercera;
+    Boolean retr1;
+    Boolean retr2;
+    Boolean retr3;
 
     public ObjetoFalta(int idAlumno, int numero, String nombre) {
         this.idAlumno = idAlumno;
@@ -15,6 +18,9 @@ public class ObjetoFalta {
         this.primera = false;
         this.segunda = false;
         this.tercera = false;
+        this.retr1 = false;
+        this.retr2 = false;
+        this.retr3 = false;
     }
 
     public int getIdAlumno() {
@@ -65,9 +71,33 @@ public class ObjetoFalta {
         this.tercera = tercera;
     }
 
+    public Boolean getRetr1() {
+        return retr1;
+    }
+
+    public void setRetr1(Boolean retr1) {
+        this.retr1 = retr1;
+    }
+
+    public Boolean getRetr2() {
+        return retr2;
+    }
+
+    public void setRetr2(Boolean retr2) {
+        this.retr2 = retr2;
+    }
+
+    public Boolean getRetr3() {
+        return retr3;
+    }
+
+    public void setRetr3(Boolean retr3) {
+        this.retr3 = retr3;
+    }
+
     @Override
     public String toString(){
-        return idAlumno + numero + nombre + String.valueOf(primera) + String.valueOf(segunda) + String.valueOf(tercera);
+        return idAlumno + numero + nombre + String.valueOf(primera) + String.valueOf(segunda) + String.valueOf(tercera) + String.valueOf(retr1) + String.valueOf(retr2) + String.valueOf(retr3);
     }
 
 }

@@ -1,5 +1,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filaNegativos"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -31,6 +32,7 @@
             android:id="@+id/radioButton1Negativos"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="" />
 
@@ -38,24 +40,35 @@
             android:id="@+id/radioButton2Negativos"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="" />
         <RadioButton
             android:id="@+id/radioButton3Negativos"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="" />
         <RadioButton
             android:id="@+id/radioButton4Negativos"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="" />
         <RadioButton
             android:id="@+id/radioButton5Negativos"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="" />
+        <RadioButton
+            android:id="@+id/radioButton6Negativos"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="" />
 

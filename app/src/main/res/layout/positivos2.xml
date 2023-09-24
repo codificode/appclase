@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Positivos2">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp">
+
+            <!-- Parte 1: Fila de encabezado -->
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textViewEncabezadoNumeroPositivos"
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Num"/>
+
+                <TextView
+                    android:id="@+id/textViewEncabezadoNombrePositivos"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Nombre"/>
+                <TextView
+                    android:id="@+id/textViewEncabezadoCheckBoxPositivos"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Positivo" />
+
+                <TextView
+                    android:id="@+id/textViewEncabezadoComentariosPositivos"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Comentarios" />
+
+            </LinearLayout>
+
+            <!-- Parte 2: filas -->
+            <LinearLayout
+                android:id="@+id/linearLayoutFilasPositivos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <!-- Parte 3: Fila con botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonEnviarPositivos2"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:onClick="enviar"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Enviar" />
+
+                <Button
+                    android:id="@+id/buttonVolverPositivos2"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:onClick="volver"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Volver" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</HorizontalScrollView>

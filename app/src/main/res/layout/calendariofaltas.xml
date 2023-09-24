@@ -46,7 +46,7 @@
                     android:id="@+id/button22sept"
                     android:layout_width="60dp"
                     android:layout_height="48dp"
-                    android:onClick="llamarMetodoFaltas22sept"
+                    android:onClick="llamarMetodoFaltas22sep"
                     android:paddingHorizontal="5dp"
                     android:text="22" />
 
@@ -54,15 +54,15 @@
                     android:id="@+id/buttons25sept"
                     android:layout_width="60dp"
                     android:layout_height="48dp"
-                    android:onClick="llamarMetodoFaltas25sept"
+                    android:onClick="llamarMetodoFaltas25sep"
                     android:paddingHorizontal="5dp"
                     android:text="25" />
 
                 <Button
                     android:id="@+id/button26sept"
                     android:layout_width="60dp"
-                    android:layout_height="48dp"
-                    android:onClick="llamarMetodoFaltas26sept"
+                    android:layout_height="wrap_content"
+                    android:onClick="llamarMetodoFaltas26sep"
                     android:paddingHorizontal="5dp"
                     android:text="26" />
 
@@ -70,7 +70,7 @@
                     android:id="@+id/buttons27sept"
                     android:layout_width="60dp"
                     android:layout_height="48dp"
-                    android:onClick="llamarMetodoFaltas27sept"
+                    android:onClick="llamarMetodoFaltas27sep"
                     android:paddingHorizontal="5dp"
                     android:text="27" />
 
@@ -78,7 +78,7 @@
                     android:id="@+id/button28sept"
                     android:layout_width="60dp"
                     android:layout_height="48dp"
-                    android:onClick="llamarMetodoFaltas28sept"
+                    android:onClick="llamarMetodoFaltas28sep"
                     android:paddingHorizontal="5dp"
                     android:text="28" />
 
@@ -86,7 +86,7 @@
                     android:id="@+id/buttons29sept"
                     android:layout_width="60dp"
                     android:layout_height="48dp"
-                    android:onClick="llamarMetodoFaltas29sept"
+                    android:onClick="llamarMetodoFaltas29sep"
                     android:paddingHorizontal="5dp"
                     android:text="29" />
             </LinearLayout>

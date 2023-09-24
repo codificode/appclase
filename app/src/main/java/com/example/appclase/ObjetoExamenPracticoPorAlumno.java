@@ -1,12 +1,12 @@
 package com.example.appclase;
 
 public class ObjetoExamenPracticoPorAlumno {
-    String numeroPregunta="";
+    String pregunta="";
     String acierta ="";
 
 
-    public ObjetoExamenPracticoPorAlumno(String numeroPregunta) {
-        this.numeroPregunta = numeroPregunta;
+    public ObjetoExamenPracticoPorAlumno(String pregunta) {
+        this.pregunta = pregunta;
     }
 
     public String getAcierta() {
@@ -17,11 +17,11 @@ public class ObjetoExamenPracticoPorAlumno {
         this.acierta = acierta;
     }
 
-    public String getNumeroPregunta() {
-        return numeroPregunta;
+    public String getPregunta() {
+        return pregunta;
     }
 
-    public void setNumeroPregunta(String numeroPregunta) {
-        this.numeroPregunta = numeroPregunta;
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
     }
 }

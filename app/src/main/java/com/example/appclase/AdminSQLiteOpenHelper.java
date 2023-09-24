@@ -134,6 +134,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 "    nombrealumno TEXT,\n" +
                 "    causa TEXT CHECK (causa IN (\n" +
                 "        'para/lava/cambia antes de tiempo',\n" +
+                "        'no epis',\n" +
                 "        'no recoge',\n" +
                 "        'juega/molesta',\n" +
                 "        'no trabaja',\n" +

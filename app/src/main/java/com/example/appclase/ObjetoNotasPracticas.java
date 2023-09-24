@@ -12,9 +12,7 @@ public class ObjetoNotasPracticas {
     String pra4 = "";
     String pra5 = "";
     String pra6 = "";
-
     String pra7 = "";
-
     String pra8 = "";
     String pra9 = "";
     String pra10 = "";
@@ -28,6 +26,20 @@ public class ObjetoNotasPracticas {
         this.idAlumno = idAlumno;
         this.numero = numero;
         this.nombre = nombre;
+        this.pra1 =  "";
+        this.pra2 =  "";
+        this.pra3 =  "";
+        this.pra4 =  "";
+        this.pra5 =  "";
+        this.pra6 =  "";
+        this.pra7 =  "";
+        this.pra8 =  "";
+        this.pra9 =  "";
+        this.pra10 =  "";
+        this.pra11 =  "";
+        this.pra12 =  "";
+        this.pra13 =  "";
+        this.pra14 =  "";
     }
 
     public int getIdAlumno() {

@@ -13,7 +13,7 @@
         android:layout_height="63dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="248dp"
-        android:onClick="importarDesdeFija"
+        android:onClick="importarBDAviso"
         android:text="Importar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
