@@ -12,14 +12,14 @@
 
         <LinearLayout
             android:id="@+id/pantalla"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginStart="16dp">
 
             <LinearLayout
                 android:id="@+id/encabezadoTotal"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
@@ -37,7 +37,7 @@
 
                         <TextView
                             android:id="@+id/textViewNombreAlumnoExamenPracticoPorAlumno"
-                            android:layout_width="220dp"
+                            android:layout_width="300dp"
                             android:layout_height="40dp"
                             android:layout_marginStart="5dp" />
                     </LinearLayout>
@@ -49,13 +49,13 @@
 
                         <TextView
                             android:id="@+id/textViewPreguntaExamenPracticoPorAlumno"
-                            android:layout_width="70dp"
+                            android:layout_width="200dp"
                             android:layout_height="40dp"
                             android:layout_marginStart="5dp"
                             android:text="Pregunta" />
 
                         <TextView
-                            android:id="@+id/textVieSiExamenPracticoPorAlumno"
+                            android:id="@+id/textViewSiExamenPracticoPorAlumno"
                             android:layout_width="50dp"
                             android:layout_height="40dp"
                             android:layout_marginStart="5dp"
